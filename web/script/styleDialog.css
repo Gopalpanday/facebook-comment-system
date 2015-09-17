@@ -1,0 +1,92 @@
+#mainContainer{
+    margin: auto;
+    padding: auto;
+    width: 800px;
+    border: 1px green solid;
+}
+#commentContainer{
+    margin-bottom: 20px;
+    padding: 20px;
+    display: none;
+    border: 2px red solid;
+    width: 700px;
+    position: absolute;
+    left: 300px;
+    top: 100px;
+    background-color: lightsteelblue;
+}
+#controls{
+    text-align: right;
+    font-weight: bolder;
+    font-size: 4em;
+    cursor: pointer;
+}
+.commentFormTitle{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+.commentFormLeftWrapper{
+    float: left;
+    width: 150px;
+}
+.commentFormRighttWrapper{
+    margin-left: 25px;
+    width: 600px;
+}
+.commentFormLabel{
+    margin-left: 20px;
+    margin-bottom: 30px;
+    font-family: Aharoni;
+    font-weight: bolder;
+}
+label{
+    font-family: Aharoni;
+    font-weight: bolder;
+}
+.commentFormInput{
+    margin-bottom: 10px;
+    margin-right: 30px;
+    width: 200px;
+}
+.commentFormTextArea{
+    width: 200px;
+    margin-right: 30px;
+}
+
+#AllComment{
+    padding: 20px;
+    //border: 1px lightblue solid;
+    height: 300px;
+    overflow: auto;
+    z-index: 100;
+    background-color: white;
+}
+#tblComments{
+    width: 700px;
+    border: 1px lightblue solid;
+}
+.tblLabel{
+    font-family: Aharoni;
+    width: 100px;
+}
+.tblData{
+    padding: 10px;
+    font-family: Times New Roman;
+    border: 2px yellow solid;
+    background-color: green;
+    border-radius: 100px;
+    color: gold;
+    font-weight: bold;
+}
+#respondComment{
+    padding: 20px;
+    font-family: Aharoni;
+    font-weight: bolder;
+}
+#addCommentTextArea{
+    width: 700px;
+    font-weight: bolder;
+    cursor: pointer;
+}

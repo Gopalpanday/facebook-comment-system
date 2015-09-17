@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>:: Form Comment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <script src="script/FormAddCommentDialog.js"></script>
+        <link rel="stylesheet" href="script/styleDialog.css" />
+
+        <link href="script/jquery-ui.css" rel="stylesheet">
+        <script src="script/jquery-1.11.2.js"></script>
+        <script src="script/jquery-ui.js"></script>
+
+        <script>
+            $(function () {
+                $("#addCommentTextArea").click(function () {
+                    $("#commentContainer").css("display", "block");
+                });
+                
+                $("#controls").click(function(){
+                    $("#commentContainer").css("display", "none");
+                });
+            });
+        </script>
+
+    </head>
+    <body onload="loadRecords()">
+
+        <div id="mainContainer">
+            <div id="respondComment">
+                Comments (1)<br/>
+                <textarea id="addCommentTextArea" readonly="">Respond To This Video...</textarea>
+            </div>
+            <hr/>
+            <div id="AllComment"></div>
+        </div>
+
+        <div id="commentContainer">
+            <div id="controls">*</div>
+            <div id="commentTitle" class="commentFormTitle">Fill Form to Submit</div>
+            
+            <div class="commentFormLeftWrapper">
+                <div class="commentFormLabel">Name : </div>
+                <div class="commentFormLabel">Comment : </div>
+            </div>
+
+            <div class="commentFormRighttWrapper">
+                <form id="formComment">
+                    <input id="commentName" onkeyup="validateName()" class="commentFormInput" type="text" /><label id="commentNamePrompt"></label><br />
+                    <textarea id="commentMessage" onkeyup="validateComment()" class="commentFormTextArea"></textarea><label id="commentMessagePrompt"></label><br />
+                </form>
+            </div>
+            <button onclick="validateCommentForm()">Submit Form</button><label id="commentPrompt"></label>
+        </div>
+
+    </body>
+</html>
