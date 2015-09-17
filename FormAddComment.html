@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>:: Form Comment</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="script/jquery-1.11.2.js"></script>
+        <script type="text/javascript" src="script/FormAddComment.js"></script>
+        <link rel="stylesheet" type="text/css" href="script/style.css" />
+    </head>
+    <body onload="loadRecords()">
+
+        <div id="mainContainer">
+
+            <div id="commentContainer">
+                <div id="commentTitle" class="commentFormTitle">Fill Form to Submit</div>
+                <div class="commentFormLeftWrapper">
+                    <div class="commentFormLabel">Name : </div>
+                    <div class="commentFormLabel">Comment : </div>
+                </div>
+
+                <div class="commentFormRighttWrapper">
+                    <form id="formComment">
+                        <input id="commentName" onkeyup="validateName()" class="commentFormInput" type="text" /><label id="commentNamePrompt"></label><br />
+                        <textarea id="commentMessage" onkeyup="validateComment()" class="commentFormTextArea"></textarea><label id="commentMessagePrompt"></label><br />
+                    </form>
+                </div>
+                <button onclick="validateCommentForm()">Post Comment</button><label id="commentPrompt"></label>
+            </div>
+            <hr/>
+            <div id="AllComment"></div>
+        </div>
+
+    </body>
+</html>
